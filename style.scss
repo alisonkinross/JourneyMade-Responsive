@@ -1,0 +1,587 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}.clearfix:after{content:"";visibility:hidden;display:block;height:0;clear:both;}
+
+// _____________________________ Regular selectors ____________________
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1280px;
+}
+
+h1 {
+	margin: 0;
+	padding-top: 80px;
+	padding-bottom: 845px;
+}
+
+h2 {
+	color: #231F20;
+	font: inherit;
+	font-size: 44px;
+	line-height: 56px;
+	margin-top: 70px;
+}
+
+h3, h4 {
+	color: #231F20;
+	font: inherit;
+	font-size: 26px;
+	line-height: 34px;
+	margin: 0;
+}
+
+p {
+	color: #797B7E;
+	margin:0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: #00B480;
+	text-decoration: none;
+	font: inherit;
+}
+
+	a:hover {
+		color: #4F8510;
+	}
+
+//__________________________Class selectors____________________________
+
+.wrapper {
+	background: #E3E3E1;
+}
+
+.content {
+	width: 66.7%;
+	float: right;
+	padding-left: 5%;
+	padding-right: 12%;
+	background: white;
+}
+
+//____________________________Top Nav__________________________________
+
+	ul.nav {
+		padding: 0;
+		margin-top: 50px;
+		li {
+			display: inline;
+			a {
+				padding: 20px 40px 20px 0;
+				transition: all 0.1s;
+			}
+		}
+	}
+
+	ul.nav a:hover {
+		font-size: 20px;
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+
+//_____________________________People__________________________________
+
+	.masters .person {
+		width: 50%;
+		float: left;
+		padding-right: 2%;
+	}
+
+	.journeys .person {
+		width: 33.3%;
+		float: left;
+		padding-right: 1%;
+	}
+
+	.readBio {
+		position: relative;
+		display: block;
+	}
+
+	.readBio span {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		text-align: center;
+		font-size: 30px;
+		color: black;
+		padding: 35% 0;
+		background: rgba(255, 255, 255, 0.7);
+		display: none;
+	}
+
+	.readBio:hover span {
+		display: block;
+	}
+
+	.modal {
+	  position: fixed;
+	  font-family: Helvetica, sans-serif;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: rgba(0, 0, 0, 0.85);
+	  pointer-events: none;
+	  max-height: 100%;
+	  z-index: 5;
+	  opacity: 0;
+	  transition: opacity 0.5s ease-in;
+	}
+
+	.modal:target {
+	  opacity: 1;
+	  pointer-events: auto;
+	}
+
+	.modal > div {
+	  max-width: 40%;
+	  position: relative;
+	  margin: 6% auto;
+	  background: #FFF;
+	}
+
+	.modalInfo {
+	  padding: 20px;
+	  a {
+	  	font-size: 12px;
+	  	margin-right: 10px;
+	  }
+	}
+
+	img {
+	  max-width: 100%;
+	}
+
+	a.close {
+	  position: absolute;
+	  right: 0;
+	  top: -37px;
+	  width: 30px;
+	  z-index: 999999;
+	}
+
+		.journeys h4 {
+			font-size: 16px;
+			line-height: 26px;
+		}
+
+//______________________________Questions______________________________
+
+	.smallVersion {
+		display: none;
+	}
+
+	.goodFit {
+		clear: both;
+		h2 {
+			padding-top: 40px;
+		}
+	}
+
+	.list {
+		padding-bottom: 50px;
+		.number {
+			font-size: 50px;
+			line-height: 56px;
+			display: inline-block;
+		}
+		.text {
+			font-size: 20px;
+			display: inline-block;
+			margin-left: 20px;
+		}
+	}
+
+//_______________________________Form__________________________________
+
+	form {
+		padding: 20px;
+		input {
+			display: block;
+			// padding: 20px;
+			font-size: 20px;
+			border: none;
+			border-bottom: 1px solid gray;
+			margin: 5px;
+			width: 100%;
+			&:focus {
+				outline: none;
+			}
+		}
+		textarea {
+			width: 100%;
+		}
+	}
+
+//________________________________Side Bar_____________________________
+
+.sidebar {
+	width: 33.3%;
+	float: right;
+	.small {
+		display: none;
+	}
+}
+
+	.intro {
+		background-image: url('images/hero.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 1080px;
+		// position: relative;
+
+		p {
+			color: white;
+			margin-left: 30px;
+			font-weight: 200;
+		}
+	}
+
+	.journeyMade {
+		display: block;
+		background: url('images/logo-journeymade.svg') no-repeat;
+		text-indent: -9999px;
+		height: 114px;
+		width: 224px;
+		margin: 0 auto;
+	}
+
+	.fixedDiv {
+		position: fixed;
+		height: 80px;
+		width: 100%;
+		position: fixed;
+		background: #231f20;
+		top: 0;
+		display: none;
+	}
+
+	.logo {
+		position: absolute;
+		display: inline-block;
+		text-align: center;
+		width: 120px;
+		top: 18%;
+		left: 11%;
+		margin: 0 auto;
+	}
+
+//_____________________Green Boxes_____________________________________
+
+	.blocks {
+		h3, p {
+			color: white;
+			font-weight: 200;
+		}
+		p {
+			padding: 10px 0;
+		}
+		div {
+			padding: 20px;
+		}
+	}
+
+	.team {
+		background: #00B480;
+	}
+
+	.pair {
+		background: #4F8510;
+	}
+
+	.experts {
+		background: #80A94E;
+	}
+
+	.right {
+		background: #4B8256;
+	}
+
+	.yourself {
+		background: #73AE80;
+	}
+
+	.final {
+		background: #E3E3E1;
+		padding: 20px;
+	}
+
+//________________________________Footer_______________________________
+
+.footer {
+	clear: both;
+	h2 {
+		// margin: 0;
+	}
+	.footerLeft {
+		float: left;
+		width: 66.7%;
+		background: white;
+		padding-left: 5%;
+		p:last-child {
+			margin-bottom: 50px;
+		}
+	}
+	.hackerYou {
+		float: right;
+		width: 33.3%;
+		background: #E3E3E1;
+		padding: 20px;
+		padding-top: 150px;
+		padding-bottom: 50px;
+	}
+}
+
+//_______________________Responsiveness!_______________________________
+
+// @medie (max-width: 1280px) {
+// 	.intro .fixedDiv {
+// 		min-width: 100%;
+// 		max-width: 100%;
+// 		right: 0;
+// 		left: 0;
+// 	}
+// }
+
+@media (max-width: 940px) {
+	h2 {
+		font-size: 40px;
+	}
+
+	.content {
+		padding-left: 4%;
+		padding-right: 8%;
+	}
+
+	.masters .person {
+		width: 100%;
+	}
+
+	.journeys .person {
+		width: 50%;
+	}
+
+	.footer .hackerYou {
+		padding-top: 70px;
+	}
+	.modal > div {
+	  max-width: 60%;
+	  margin-top: 8%;
+	}
+}
+
+@media (max-width: 768px) {
+	h2 {
+		font-size: 36px;
+		line-height: 48px;
+		margin-top: 30px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 23px;
+	}
+
+	.content {
+		padding-left: 3%;
+		padding-right: 3%;
+		width: 64%;
+	}
+
+	.sidebar {
+		width: 36%;
+	}
+
+	.footer {
+		.footerLeft {
+			width: 64%;
+		}
+		.hackerYou {
+			width: 36%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+
+	.blocks h3 {
+		font-size: 20px;
+	}
+
+	.journeys .person img {
+		width: 100%;
+	}
+}
+
+@media (max-width: 680px) {
+	.content {
+		width: 100%;
+		float: left;
+		clear: both;
+		.smallVersion {
+			display: block;
+			background: white;
+			clear: both;
+			padding: 40px 0 0px;
+		}
+		.big {
+			display: none;
+		}
+	}
+
+	.sidebar {
+		width: 100%;
+		float: left;
+		.logo {
+			left: 41%;
+		}
+		h1 {
+			padding-bottom: 210px;
+		}
+		li {
+			padding-top: 0;
+		}
+		ul.nav {
+			margin-top: 10px;
+			li a {
+				padding-top: 0;
+			}
+		}
+		.blocks {
+			div {
+				width: 50%;
+				float: left;
+			}
+			.yourself {
+				clear: both;
+				width: 100%;
+			}
+			.experts {
+				padding-bottom: 90px;
+			}
+		}
+		.final {
+			clear: both;
+		}
+		.bigVersion {
+			display: none;
+		}
+		.small {
+			display: block;
+			width: 80%;
+			margin: 0 auto 100px;
+			padding: 5px;
+			box-shadow: 0 0 8px gray;
+			h2 {
+				font-size: 30px;
+				line-height: 38px;
+			}
+			p {
+				color: black;
+				margin: 0;
+			}
+		}
+		.transparent {
+			background: rgba(255, 255, 255, 0.7);
+		}
+	}
+
+	.journeys .person {
+		width: 50%;
+	}
+
+	.footer {
+		.footerLeft {
+			width: 100%;
+		}
+		.hackerYou {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.sidebar h1 {
+		padding-bottom: 170px;
+	}
+	.modal > div {
+	  	max-width: 80%;
+	  	margin-top: 10%;
+	}
+}
+
+@media (max-width: 490px) {
+	.sidebar h1 {
+		padding-bottom: 130px;
+	}
+	.sidebar .small {
+		margin-bottom: 80px;
+	}
+}
+
+@media (max-width: 450px) {
+	.sidebar h1 {
+		padding-bottom: 100px;
+	}
+
+	.sidebar .small {
+		margin-bottom: 60px;
+		h2 {
+			font-size: 24px;
+			line-height: 32px;
+		}
+		p {
+			font-size: 12px;
+			line-height: 20px;
+		}
+	}
+	ul.nav li a {
+		padding: 20px 20px 20px 0;
+	}
+}
+
+@media (max-width: 420px) {
+	.journeys .person {
+		width: 100%;
+	}
+	.content {
+		padding: 0;
+		h2 {
+			font-size: 30px;
+			line-height: 38px;
+			margin: 10px;
+		}
+		ul.nav {
+			margin: 0;
+			a {
+				padding: 10px;
+			}
+		}
+	}
+	.sidebar .blocks {
+		div {
+			width: 100%;
+		}
+		.experts {
+			padding: 20px;
+		}
+	}
+}
+
+
+
+
+
